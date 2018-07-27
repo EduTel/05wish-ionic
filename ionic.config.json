@@ -1,6 +1,6 @@
 {
   "name": "05wish",
-  "app_id": "6f37427e",
+  "integrations": {},
   "type": "ionic-angular",
-  "integrations": {}
+  "pro_id": "6f37427e"
 }
