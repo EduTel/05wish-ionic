@@ -1,4 +1,4 @@
-export class WishList{
+export class ListItem{
   desc : string;
   completado: boolean;
   constructor(desc:string){
