@@ -1,11 +1,14 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color='primary'>
     <ion-title>terminado</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-
-  <h2>hola terminado</h2>
-
+<ion-content >
+  <img src="../../assets/imgs/completados.jpg" alt="">
+  <ion-list>
+    <button ion-item *ngFor="let item of _WishService.lists" (click)="itemSelected(item)">
+      {{ item.titulo | json }}
+    </button>
+  </ion-list>
 </ion-content>
