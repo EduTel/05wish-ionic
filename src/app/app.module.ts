@@ -13,6 +13,8 @@ import { TerminadoComponent } from "../pages/terminado/terminado.component";
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+//sevices
+import { WishService } from "../services/wish.service";
 @NgModule({
   declarations: [
     MyApp,
@@ -40,6 +42,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
+    WishService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
