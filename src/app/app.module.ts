@@ -3,12 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
+//paginas
 //import { AboutPage } from '../pages/about/about';
 //import { ContactPage } from '../pages/contact/contact';
 //import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { PendientesComponent } from "../pages/perdientes/pendientes.component";
 import { TerminadoComponent } from "../pages/terminado/terminado.component";
+import { AddPage } from "../pages/add/add.component";
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -23,7 +25,8 @@ import { WishService } from "../services/wish.service";
     //HomePage,
     TabsPage,
     PendientesComponent,
-    TerminadoComponent
+    TerminadoComponent,
+    AddPage
   ],
   imports: [
     BrowserModule,
@@ -37,7 +40,8 @@ import { WishService } from "../services/wish.service";
     //HomePage,
     TabsPage,
     PendientesComponent,
-    TerminadoComponent
+    TerminadoComponent,
+    AddPage
   ],
   providers: [
     StatusBar,
