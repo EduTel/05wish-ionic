@@ -1,12 +1,16 @@
 import { Component } from "@angular/core";
 import { WishService } from "../../services/wish.service";
 import { List } from "../../models";
+import { NavParams } from "ionic-angular";//error en la importacion automatica
 @Component({
   selector: 'page-add',
   templateUrl: 'add.component.html'
 })
 export class AddPage {
-  constructor(public _WishService: WishService) {
+  c_list: List;
+  constructor(public _WishService: WishService, private _navParams: NavParams ) {
+    const send_titulo= this._navParams.get('send_titulo');
+    this.c_list = new List(send_titulo);
 
   }
   itemSelected(_list: List) {
