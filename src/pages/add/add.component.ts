@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { WishService } from "../../services/wish.service";
-import { List } from "../../models";
+import { List, ListItem } from "../../models";
 import { NavParams } from "ionic-angular";//error en la importacion automatica
 @Component({
   selector: 'page-add',
@@ -19,6 +19,15 @@ export class AddPage {
     console.log(_list);
   }
   addItem(){
-
+    if (this.c_nombreItem.length===0 ){
+      return;
+    }
+    const nuevoItem = new ListItem(this.c_nombreItem);
+    this.c_list.items.push(nuevoItem);
+    console.log(this.c_nombreItem);
+    this.c_nombreItem="";
+  }
+  updatateTask(_item: ListItem){
+    _item.completado = !_item.completado;
   }
 }
