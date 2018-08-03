@@ -13,7 +13,7 @@ export class AddPage {
     const send_titulo= this._navParams.get('send_titulo');
     this.c_list = new List(send_titulo);
     console.log(this.c_list);
-
+    this._WishService.addList(this.c_list);
   }
   itemSelected(_list: List) {
     console.log(_list);
