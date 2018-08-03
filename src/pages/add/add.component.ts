@@ -30,4 +30,8 @@ export class AddPage {
   updatateTask(_item: ListItem){
     _item.completado = !_item.completado;
   }
+  deleteItem(position:number){
+    console.log(position);
+    this.c_list.items.splice(position,1);
+  }
 }
