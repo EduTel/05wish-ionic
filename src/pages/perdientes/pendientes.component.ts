@@ -14,6 +14,10 @@ export class PendientesComponent{
   }
   itemSelected(_list: List){
     console.log(_list);
+    this.navCtr.push(AddPage,{
+      titulo: _list.titulo,
+      lista: _list
+    });
   }
   addList(){
     const prompt = this._alertCtrl.create({

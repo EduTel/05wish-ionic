@@ -7,9 +7,9 @@ export class WishService{
   constructor(){
     this.loadStorage();
     //console.warn("hola WishService");
-    const lista1 = new List("xx");
+    //const lista1 = new List("xx");
     //const lista2 = new List("Libros comprar");
-    this.c_lists.push(lista1);
+    //this.c_lists.push(lista1);
     //console.log(this.lists);
   }
   addList(_list:List){
