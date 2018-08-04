@@ -7,9 +7,19 @@
 <ion-content >
   <img src="../../assets/imgs/pendientes.jpg" alt="">
   <ion-list>
-    <button ion-item *ngFor="let item of _WishService.c_lists;let i=index" (click)="itemSelected(item)">
-      {{i}} : {{ item.titulo  }}
-    </button>
+    <ion-item-sliding *ngFor="let item of _WishService.c_lists;let i=index">
+      <button ion-item (click)="itemSelected(item)">
+        {{i}} : {{ item.titulo  }}
+        <ion-note item-end>
+          {{ item.items.length }} items
+        </ion-note>
+      </button>
+      <ion-item-options side="left">
+        <button (click)='_WishService.deleteList(item)' ion-button icon-only color="dark">
+          <ion-icon name="close"></ion-icon>
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
   </ion-list>
   <ion-fab bottom right >
     <button (click)="addList()" ion-fab >

@@ -18,6 +18,7 @@ export class WishService{
   }
   saveStorage(){
     localStorage.setItem('data', JSON.stringify(this.c_lists) );
+    console.error(this.c_lists);
   }
   loadStorage(){
     if( localStorage.getItem('data') ){
@@ -27,5 +28,13 @@ export class WishService{
     }else{
       console.warn("no localstorage");
     }
+  }
+  deleteList(_lista: List){
+    console.log("deleteList");
+    console.log(_lista.id);
+    this.c_lists = this.c_lists.filter(_lists=>{
+      return _lists.id!=_lista.id;
+    });
+    this.saveStorage();
   }
 }
