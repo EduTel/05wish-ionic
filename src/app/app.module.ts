@@ -12,6 +12,9 @@ import { PendientesComponent } from "../pages/perdientes/pendientes.component";
 import { TerminadoComponent } from "../pages/terminado/terminado.component";
 import { AddPage } from "../pages/add/add.component";
 
+//pipes
+import { BooleanListsPipe } from './../pipes/boolean-lists/boolean-lists';
+
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -26,7 +29,8 @@ import { WishService } from "../services/wish.service";
     TabsPage,
     PendientesComponent,
     TerminadoComponent,
-    AddPage
+    AddPage,
+    BooleanListsPipe
   ],
   imports: [
     BrowserModule,

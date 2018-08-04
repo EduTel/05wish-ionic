@@ -7,7 +7,7 @@
 <ion-content >
   <img src="../../assets/imgs/pendientes.jpg" alt="">
   <ion-list>
-    <ion-item-sliding *ngFor="let item of _WishService.c_lists;let i=index">
+    <ion-item-sliding *ngFor="let item of _WishService.c_lists|booleanLists:false;let i=index">
       <button ion-item (click)="itemSelected(item)">
         {{i}} : {{ item.titulo  }}
         <ion-note item-end>

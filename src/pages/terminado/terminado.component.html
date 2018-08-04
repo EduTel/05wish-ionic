@@ -7,7 +7,7 @@
 <ion-content >
   <img src="../../assets/imgs/completados.jpg" alt="">
   <ion-list>
-    <button ion-item *ngFor="let item of _WishService.c_lists" (click)="itemSelected(item)">
+    <button ion-item *ngFor="let item of _WishService.c_lists|booleanLists:true" (click)="itemSelected(item)">
       {{ item.titulo | json }}
     </button>
   </ion-list>
