@@ -1,0 +1,15 @@
+<ion-list>
+  <ion-item-sliding *ngFor="let item of _WishService.c_lists|booleanLists:c_finish;let i=index">
+    <button ion-item (click)="itemSelected(item)">
+      {{i}} : {{ item.titulo  }}
+      <ion-note item-end>
+        {{ item.items.length }} items
+      </ion-note>
+    </button>
+    <ion-item-options side="left">
+      <button (click)='_WishService.deleteList(item)' ion-button icon-only color="dark">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-item-options>
+  </ion-item-sliding>
+</ion-list>

@@ -1,3 +1,4 @@
+import { ListasComponent } from './../components/lists.component';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
@@ -30,7 +31,8 @@ import { WishService } from "../services/wish.service";
     PendientesComponent,
     TerminadoComponent,
     AddPage,
-    BooleanListsPipe
+    BooleanListsPipe,
+    ListasComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +47,8 @@ import { WishService } from "../services/wish.service";
     TabsPage,
     PendientesComponent,
     TerminadoComponent,
-    AddPage
+    AddPage,
+    ListasComponent
   ],
   providers: [
     StatusBar,

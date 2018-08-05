@@ -9,15 +9,8 @@ import { AddPage } from '../add/add.component';
   templateUrl: 'pendiente.component.html'
 })
 export class PendientesComponent{
-  constructor(public _WishService: WishService, private navCtr: NavController, public _alertCtrl: AlertController  ){
+  constructor(private navCtr: NavController, public _alertCtrl: AlertController  ){
 
-  }
-  itemSelected(_list: List){
-    console.log(_list);
-    this.navCtr.push(AddPage,{
-      titulo: _list.titulo,
-      lista: _list
-    });
   }
   addList(){
     const prompt = this._alertCtrl.create({
